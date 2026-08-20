@@ -1,0 +1,8 @@
+system: ../systems/edge_fog_cloud.yaml
+application: ../workloads/example.yaml
+runtime: twin
+scenario: ../scenarios/quickstart-degradation.yaml
+repeat: 1
+seed: 7
+metrics:
+  - application_latency_s

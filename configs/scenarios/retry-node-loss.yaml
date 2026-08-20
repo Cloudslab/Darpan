@@ -1,0 +1,5 @@
+name: retry-node-loss
+events:
+  - at_s: 1
+    kind: node.offline
+    node_id: cloud-1

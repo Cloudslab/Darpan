@@ -1,0 +1,6 @@
+system: ../../reference/cpu-system.yaml
+workload: ../../reference/cpu-workload.yaml
+runtime: twin
+policy: first-fit
+seed: 101
+metrics: [application_latency_s, application_success_rate]

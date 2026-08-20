@@ -1,0 +1,12 @@
+system: ../systems/edge_fog_cloud.yaml
+application: ../workloads/example.yaml
+runtime: real
+cluster: ../systems/cluster.example.yaml
+policy: first-fit
+repeat: 1
+seed: 101
+timeout: 120
+metrics:
+  - application_latency_s
+  - application_success_rate
+  - component_retry_count

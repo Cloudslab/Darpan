@@ -1,0 +1,13 @@
+name: quickstart-degradation
+events:
+  - at_s: 0.25
+    kind: measurement.observed
+    target: cloud-1
+    name: compute.cpu_capacity
+    value: 0.5
+    unit: count
+  - at_s: 0
+    kind: link.changed
+    link_id: fog-cloud
+    latency_ms: 100
+    bandwidth_mbps: 20

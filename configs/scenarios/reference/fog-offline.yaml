@@ -1,0 +1,5 @@
+name: reference-fog-offline
+events:
+  - at_s: 0
+    kind: node.offline
+    node_id: fog

@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "Darpan: A Digital Twin Framework for Next-Generation Continuum Computing"
+type: software
+version: 0.2.0.dev27
+authors:
+  - name: "Darpan Authors"
+license: Apache-2.0
+message: "If you use Darpan in research, please cite the Darpan paper/software release."

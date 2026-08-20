@@ -1,0 +1,6 @@
+system: ../../reference/network-system.yaml
+application: ../../reference/service-app.yaml
+runtime: twin
+policy: ../../reference/lifecycle_policy.py:ReferenceLifecyclePolicy
+seed: 101
+metrics: [application_latency_s, application_success_rate]

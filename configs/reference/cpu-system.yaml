@@ -1,0 +1,31 @@
+name: darpan-reference-cpu-continuum
+nodes:
+  - id: cloud
+    tier: cloud
+    resources:
+      - name: cpu
+        capacity: 2
+        attributes: {scheduling: fair}
+  - id: edge
+    tier: edge
+    resources:
+      - name: cpu
+        capacity: 1
+        attributes: {scheduling: fair}
+  - id: fog
+    tier: fog
+    resources:
+      - name: cpu
+        capacity: 2
+        attributes: {scheduling: fair}
+links:
+  - id: edge-fog
+    source: edge
+    target: fog
+    latency_ms: 3
+    bandwidth_mbps: 200
+  - id: fog-cloud
+    source: fog
+    target: cloud
+    latency_ms: 15
+    bandwidth_mbps: 1000

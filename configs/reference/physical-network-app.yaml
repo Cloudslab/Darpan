@@ -1,0 +1,22 @@
+id: physical-network-artifact
+components:
+  source:
+    command:
+      - python3
+      - -c
+      - "from pathlib import Path; Path('payload.bin').write_bytes(b'x' * 4194304)"
+    resources: {cpu: 0.1}
+    work_units: 0
+  sink:
+    command:
+      - python3
+      - -c
+      - "from pathlib import Path; data=Path('input.bin').read_bytes(); assert len(data) == 4194304"
+    resources: {cpu: 0.1}
+    work_units: 0
+flows:
+  - source: source
+    target: sink
+    data_size_bytes: 4194304
+    artifact: payload.bin
+    target_path: input.bin

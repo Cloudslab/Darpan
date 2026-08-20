@@ -1,0 +1,33 @@
+nodes:
+  - id: edge-1
+    host: 192.168.1.21
+    port: 8765
+    ssh_user: ubuntu
+    token_env: DARPAN_EDGE_1_TOKEN
+    tls_ca: certs/ca.pem
+    tls_server_name: edge-1.example.org
+    network_probe: true
+    artifact_forward: true
+    physical_control: true
+    control_interfaces: [eth1]
+  - id: fog-1
+    host: 192.168.1.22
+    port: 8765
+    ssh_user: ubuntu
+    token_env: DARPAN_FOG_1_TOKEN
+    tls_ca: certs/ca.pem
+    tls_server_name: fog-1.example.org
+    network_probe: true
+    artifact_forward: true
+    physical_control: true
+    control_interfaces: [eth1, eth2]
+  - id: cloud-1
+    host: 192.168.1.23
+    port: 8765
+    ssh_user: ubuntu
+    token_env: DARPAN_CLOUD_1_TOKEN
+    tls_ca: certs/ca.pem
+    tls_server_name: cloud-1.example.org
+    artifact_forward: true
+    physical_control: true
+    control_interfaces: [eth1]

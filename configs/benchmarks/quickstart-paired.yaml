@@ -1,0 +1,6 @@
+baseline: ../experiments/quickstart.yaml
+candidate: ../experiments/quickstart.yaml
+metric: application_latency_s
+higher_is_better: false
+seeds: [7, 8]
+bootstrap_resamples: 50

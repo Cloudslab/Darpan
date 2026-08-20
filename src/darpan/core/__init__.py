@@ -1,0 +1,1 @@
+"""Canonical Continuum domain model."""

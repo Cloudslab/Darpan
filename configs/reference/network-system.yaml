@@ -1,0 +1,27 @@
+name: darpan-reference-network-continuum
+nodes:
+  - id: cloud
+    tier: cloud
+    resources: {cpu: 2}
+  - id: edge
+    tier: edge
+    resources: {camera: 1}
+  - id: fog
+    tier: fog
+    resources: {cpu: 2}
+links:
+  - id: edge-fog
+    source: edge
+    target: fog
+    latency_ms: 5
+    bandwidth_mbps: 500
+  - id: edge-cloud
+    source: edge
+    target: cloud
+    latency_ms: 40
+    bandwidth_mbps: 100
+  - id: fog-cloud
+    source: fog
+    target: cloud
+    latency_ms: 15
+    bandwidth_mbps: 1000

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "darpan-rl"
+dynamic = ["version"]
+description = "Official reinforcement-learning companion library for Darpan"
+requires-python = ">=3.12"
+dependencies = [
+  "darpan-continuum>=0.2.0.dev27,<0.3",
+  "numpy>=1.26",
+  "torch>=2.5",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "darpan_rl._version.__version__"}

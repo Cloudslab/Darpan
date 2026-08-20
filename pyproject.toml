@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "darpan-continuum"
+dynamic = ["version"]
+description = "A Digital Twin Framework for Next-Generation Continuum Computing"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+authors = [{name = "Darpan Authors"}]
+dependencies = [
+  "numpy>=1.26",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.24", "pytest-cov>=5", "ruff>=0.9"]
+docker = ["docker>=7"]
+gym = ["gymnasium>=1.0"]
+
+[project.scripts]
+darpan = "darpan.cli.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "darpan._version.__version__"}
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "packages/darpan-rl/src"]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.uv.workspace]
+members = ["packages/darpan-rl"]

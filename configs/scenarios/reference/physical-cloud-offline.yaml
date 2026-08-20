@@ -1,0 +1,8 @@
+name: physical-cloud-workload-plane-loss
+events:
+  - at_s: 0.5
+    kind: node.offline
+    node_id: cloud-1
+  - at_s: 4.5
+    kind: node.recovered
+    node_id: cloud-1

@@ -1,0 +1,11 @@
+name: reference-cpu-contention
+applications:
+  - id: cpu-job
+    components:
+      compute:
+        resources: {cpu: 1}
+        work_units: 4
+arrivals:
+  - application: cpu-job
+    at_s: 0
+    count: 6

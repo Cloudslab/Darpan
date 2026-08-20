@@ -1,0 +1,46 @@
+name: edge-fog-cloud
+nodes:
+  - id: edge-1
+    tier: edge
+    labels:
+      route_ipv4: 10.0.1.21
+    resources:
+      cpu: 2
+      memory: 4
+  - id: fog-1
+    tier: fog
+    labels:
+      route_ipv4: 10.0.1.22
+    resources:
+      cpu: 4
+      memory: 8
+  - id: cloud-1
+    tier: cloud
+    labels:
+      route_ipv4: 10.0.2.23
+    resources:
+      cpu: 8
+      memory: 16
+links:
+  - id: edge-fog
+    source: edge-1
+    target: fog-1
+    latency_ms: 5
+    bandwidth_mbps: 100
+    labels:
+      physical_control_scope: interface
+      physical_source_interface: eth1
+      physical_target_interface: eth1
+      physical_source_ipv4: 10.0.1.21
+      physical_target_ipv4: 10.0.1.22
+  - id: fog-cloud
+    source: fog-1
+    target: cloud-1
+    latency_ms: 20
+    bandwidth_mbps: 1000
+    labels:
+      physical_control_scope: interface
+      physical_source_interface: eth2
+      physical_target_interface: eth1
+      physical_source_ipv4: 10.0.2.22
+      physical_target_ipv4: 10.0.2.23

@@ -1,0 +1,12 @@
+id: reference-stream-service
+components:
+  ingest:
+    kind: service
+    work_units: 0
+  processor:
+    kind: stream
+    work_units: 0
+flows:
+  - source: ingest
+    target: processor
+    kind: stream

@@ -1,0 +1,16 @@
+system: ../../systems/edge_fog_cloud.yaml
+application: ../../reference/physical-retry-app.yaml
+runtime: real
+cluster: ../../systems/cluster.example.yaml
+physical_control: true
+scenario: ../../scenarios/reference/physical-cloud-offline.yaml
+policy: first-fit
+repeat: 1
+seed: 201
+timeout: 120
+metrics:
+  - application_latency_s
+  - application_success_rate
+  - component_retry_count
+  - component_retry_recovery_rate
+  - retry_downtime_s

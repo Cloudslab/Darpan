@@ -1,0 +1,7 @@
+name: physical-link-degradation
+events:
+  - at_s: 0
+    kind: link.changed
+    link_id: fog-cloud
+    latency_ms: 80
+    bandwidth_mbps: 50

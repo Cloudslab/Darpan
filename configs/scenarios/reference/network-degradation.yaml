@@ -1,0 +1,7 @@
+name: reference-network-degradation
+events:
+  - at_s: 0
+    kind: link.changed
+    link_id: edge-fog
+    latency_ms: 120
+    bandwidth_mbps: 10

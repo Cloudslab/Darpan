@@ -1,0 +1,11 @@
+id: retry-recovery-smoke
+components:
+  task:
+    command: [python, -c, "print('retry recovery')"]
+    resources:
+      cpu: 1
+    work_units: 4
+    retry:
+      max_retries: 1
+      on: [node_offline]
+      backoff_s: 0.5

@@ -1,0 +1,27 @@
+id: video-analysis
+components:
+  decode:
+    command: [python, -c, "print('decode')"]
+    resources:
+      cpu: 1
+      memory: 0.25
+    work_units: 0.5
+  detect:
+    command: [python, -c, "print('detect')"]
+    resources:
+      cpu: 1
+      memory: 0.5
+    work_units: 1.5
+  save:
+    command: [python, -c, "print('save')"]
+    resources:
+      cpu: 1
+      memory: 0.25
+    work_units: 0.25
+flows:
+  - source: decode
+    target: detect
+    data_size_bytes: 2000000
+  - source: detect
+    target: save
+    data_size_bytes: 100000

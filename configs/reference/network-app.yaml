@@ -1,0 +1,12 @@
+id: reference-network-pipeline
+components:
+  capture:
+    resources: {camera: 1}
+    work_units: 0.1
+  analyze:
+    resources: {cpu: 1}
+    work_units: 0.5
+flows:
+  - source: capture
+    target: analyze
+    data_size_bytes: 20000000
