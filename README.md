@@ -272,7 +272,7 @@ tests/           unit, contract, integration, and end-to-end tests
 
 ## Development
 
-Install development dependencies and the optional RL package:
+Install development dependencies and optional RL package:
 
 ```bash
 python -m pip install -e ".[dev]"
