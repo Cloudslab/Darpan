@@ -1146,7 +1146,7 @@ L 763.14726 60.768424
      </g>
     </g>
     <g id="text_16">
-     <!-- DAG response time (s) -->
+     <!-- Application response time (s) -->
      <g transform="translate(14.397896 285.011836) rotate(-90) scale(0.15 -0.15)">
       <defs>
        <path id="DejaVuSans-27" d="M 1259 4147
@@ -1323,28 +1323,8 @@ Q 928 4138 513 4856
 z
 " transform="scale(0.015625)"/>
       </defs>
-      <use xlink:href="#DejaVuSans-27"/>
-      <use xlink:href="#DejaVuSans-24" transform="translate(75.25 0)"/>
-      <use xlink:href="#DejaVuSans-2a" transform="translate(141.90625 0)"/>
-      <use xlink:href="#DejaVuSans-3" transform="translate(219.390625 0)"/>
-      <use xlink:href="#DejaVuSans-55" transform="translate(251.171875 0)"/>
-      <use xlink:href="#DejaVuSans-48" transform="translate(290.078125 0)"/>
-      <use xlink:href="#DejaVuSans-56" transform="translate(351.609375 0)"/>
-      <use xlink:href="#DejaVuSans-53" transform="translate(403.703125 0)"/>
-      <use xlink:href="#DejaVuSans-52" transform="translate(467.1875 0)"/>
-      <use xlink:href="#DejaVuSans-51" transform="translate(528.375 0)"/>
-      <use xlink:href="#DejaVuSans-56" transform="translate(591.75 0)"/>
-      <use xlink:href="#DejaVuSans-48" transform="translate(643.84375 0)"/>
-      <use xlink:href="#DejaVuSans-3" transform="translate(705.375 0)"/>
-      <use xlink:href="#DejaVuSans-57" transform="translate(737.15625 0)"/>
-      <use xlink:href="#DejaVuSans-4c" transform="translate(776.359375 0)"/>
-      <use xlink:href="#DejaVuSans-50" transform="translate(804.140625 0)"/>
-      <use xlink:href="#DejaVuSans-48" transform="translate(901.546875 0)"/>
-      <use xlink:href="#DejaVuSans-3" transform="translate(963.078125 0)"/>
-      <use xlink:href="#DejaVuSans-b" transform="translate(994.859375 0)"/>
-      <use xlink:href="#DejaVuSans-56" transform="translate(1033.875 0)"/>
-      <use xlink:href="#DejaVuSans-c" transform="translate(1085.96875 0)"/>
      </g>
+     <text transform="translate(14.397896 200.638008) rotate(-90)" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" fill="#000000">Application response time (s)</text>
     </g>
    </g>
    <g id="patch_3">

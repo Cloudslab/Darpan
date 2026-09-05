@@ -213,7 +213,7 @@ counted as additional physical interactions.
 
 Curves show a five-iteration trailing mean over ten independent runs; shaded
 regions show one standard deviation. Over the final 20 raw training iterations,
-mean DAG response time is 19.99 s for PPO and 7.51 s for PPO + Darpan, a 62.4%
+mean application response time is 19.99 s for PPO and 7.51 s for PPO + Darpan, a 62.4%
 reduction for the same online learner.
 
 ## Physical deployments
